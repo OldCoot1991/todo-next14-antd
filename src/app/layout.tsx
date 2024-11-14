@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-
 import './globals.css';
 import 'bootstrap/dist/css/bootstrap.css'; // add bootstrap css
 import StyledComponentsRegistry from '../lib/AntdRegistry';
@@ -8,8 +6,6 @@ import MainLayout from '@/components/MainLayout';
 import { ConfigProvider } from 'antd';
 import theme from '../theme/themeConfig';
 import ReduxProvider from '@/redux/provider';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'ToDo App',
@@ -23,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <ReduxProvider>
           <StyledComponentsRegistry>
             <ConfigProvider theme={theme}>
@@ -32,6 +28,6 @@ export default function RootLayout({
           </StyledComponentsRegistry>
         </ReduxProvider>
       </body>
-    </html>
+    </html> 
   );
 }

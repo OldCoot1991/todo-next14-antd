@@ -1,22 +1,13 @@
-import React from 'react';
-import { Layout } from 'antd';
+import { Footer } from "antd/es/layout/layout";
+import React from "react";
 
 /**
  * Renders the Footer component.
  *
  * @return {ReactElement} The rendered Footer component.
  */
-const FooterComponent: React.FC = () => {
-  const { Footer } = Layout;
-  return (
-    <Footer
-      style={{
-        textAlign: 'center',
-      }}
-    >
-      Ant Design ©2023 Created by Kavindu
-    </Footer>
-  );
+const FooterBottom: React.FC = () => {
+  return <Footer></Footer>;
 };
 
-export default FooterComponent;
+export default FooterBottom;
